@@ -28,6 +28,7 @@ on:
           - 5.10.y
           - 5.15.y
           - 6.1.y
+          - 6.1.119
           - 6.6.y
           - 6.12.y
           - 5.4.y_5.10.y
@@ -35,7 +36,7 @@ on:
           - 6.6.y_6.12.y
           - 5.4.y_5.10.y_5.15.y
           - 6.1.y_6.6.y_6.12.y
-          - all
+          - 全部
       kernel_auto:
         description: "Auto use the latest kernel"
         required: false
@@ -57,7 +58,7 @@ on:
         default: "all"
         type: choice
         options:
-          - all
+          - 全部
           - dtbs
       kernel_toolchain:
         description: "Select the compilation toolchain"
@@ -87,6 +88,7 @@ on:
         options:
           - -ophub
           - -yourname
+          - -rkmpp
 
 env:
   TZ: Etc/UTC
