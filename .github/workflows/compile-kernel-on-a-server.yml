@@ -159,8 +159,8 @@ jobs:
         with:
           build_target: kernel
           kernel_source: ${{ inputs.kernel_source }}
-          kernel_version: 6.1.119
-          kernel_auto: false
+          kernel_version: ${{ inputs.kernel_version }}
+          kernel_auto: ${{ inputs.kernel_auto }}
           delete_source: ${{ inputs.delete_source }}
           kernel_package: ${{ inputs.kernel_package }}
           kernel_sign: ${{ inputs.kernel_sign }}
