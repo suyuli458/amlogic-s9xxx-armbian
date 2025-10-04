@@ -89,6 +89,12 @@ on:
           - -ophub
           - -yourname
           - -rkmpp
+          - -Oct05
+      auto_patch:
+        description: "Sets whether to use custom kernel patches"
+        required: false
+        default: true
+        type: boolean
 
 env:
   TZ: Etc/UTC
@@ -169,6 +175,7 @@ jobs:
           kernel_toolchain: ${{ inputs.kernel_toolchain }}
           compress_format: ${{ inputs.compress_format }}
           silent_log: ${{ inputs.silent_log }}
+          auto_patch：${{ inputs.auto_patch }}
 
       - name: Upload Kernel to Release
         uses: ncipollo/release-action@main
